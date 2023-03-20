@@ -33,7 +33,7 @@
     <div class="jumbotron">
       <h1>BriefLegal</h1>
       <p>A legal document summarization tool that helps you save time and effort by summarizing legal documents in a matter of minutes.</p>
-      <a href="#" class="btn btn-primary btn-lg">Learn more</a>
+      <a href="#" class="btn btn-primary btn-lg">Click to summarize</a>
     </div>
     <div class="row">
       <div class="col-md-6">
@@ -50,24 +50,48 @@
       </div>
     </div>
   </div>
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>This is the contact page of the website.</p>
-    <form>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+  <section>
+    <div class="container p-5">
+      <!-- For demo purpose -->
+      <div class="row mb-5 text-center text-white">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="display-4">File upload button </h1>
+          <p class="lead">Build a simple file upload button using Bootstrap 4.</p>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      <!-- End -->
+  
+  
+      <div class="row">
+        <div class="col-lg-5 mx-auto">
+          <div class="p-5 bg-white shadow rounded-lg"><img src="https://res.cloudinary.com/mhmd/image/upload/v1557366994/img_epm3iz.png" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+  
+            <!-- Default bootstrap file upload-->
+  
+            <h6 class="text-center mb-4 text-muted">
+              You can use default Bootstrap file upload
+            </h6>
+  
+            <div class="custom-file overflow-hidden rounded-pill mb-5">
+              <input id="customFile" type="file" class="custom-file-input rounded-pill">
+              <label for="customFile" class="custom-file-label rounded-pill">Choose file</label>
+            </div>
+            <!-- End -->
+  
+            <h6 class="text-center mb-4 text-muted">
+              Or a custom button that launches file browser
+            </h6>
+  
+            <!-- Custom bootstrap upload file-->
+            <label for="fileUpload" class="file-upload btn btn-primary btn-block rounded-pill shadow"><i class="fa fa-upload mr-2"></i>Browse for file ...
+                          <input id="fileUpload" type="file">
+                      </label>
+            <!-- End -->
+  
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
   </section>
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
