@@ -12,7 +12,7 @@ from PIL import Image
 
 # Step 1: Load the model from the saved pickle file
 with open("C:/Users/Harsha Ashok/Downloads/bart_model.pkl", "rb") as f:
-    model = pickle.load(f)
+    bart_model = pickle.load(f)
 
 #function for chunking
 def split_text(text):
@@ -87,4 +87,4 @@ def contact():
     st.write('[LinkedIn](https://www.linkedin.com/)')
     
 if __name__ == "__main__":
-    about()
+    contact()
