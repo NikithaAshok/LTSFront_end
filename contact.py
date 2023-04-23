@@ -3,7 +3,7 @@ from PIL import Image
 
 def contact():
     st.header('Contact Us! ')
-    st.header('We would love to hear from you! :call_me_hand: :smile:')
+    st.header('We would love to hear from you! :smile:')
     # Facebook link and logo
     fb = Image.open('./facebook.png')
     twitter = Image.open('./twitter.png')
