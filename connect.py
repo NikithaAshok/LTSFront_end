@@ -54,23 +54,36 @@ def app():
     
     with col1:
         st.markdown(
-            "<a href='/#home'  target='_self'>Home</a>",
+            "<a href='/#home'  target='_self' class='anchor-button'>Home</a>",
             unsafe_allow_html=True
         )
 
     with col2:
         st.markdown(
-            "<a href='/#about'  target='_self'>About</a>",
+            "<a href='/#about'  target='_self' class='anchor-button'>About</a>",
             unsafe_allow_html=True
         )
 
     with col3:
         st.markdown(
-            "<a href='/#contact-us' target='_self'>Contact Us!</a>",
+            "<a href='/#contact-us' target='_self' class='anchor-button'>Contact Us!</a>",
             unsafe_allow_html=True
         )
     
-
+    st.markdown(
+        """
+        <style>
+        .anchor-button {
+            border: 1px solid white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
     col1,col2,col3 = st.columns([8,1,1])
     with col1:
