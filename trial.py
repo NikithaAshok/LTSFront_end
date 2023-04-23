@@ -53,6 +53,6 @@ def trial():
                     final_summary += bart_summary
 
             st.write("Output:")
-            st.text_area("", value=final_summary, height=100)
+            st.text_area("", value=final_summary, height=300)
                 
 
