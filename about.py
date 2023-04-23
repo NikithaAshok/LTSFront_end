@@ -1,10 +1,6 @@
-import json
-# pip instal streamlit
 import streamlit as st
-import requests
-# pip install streamlit-lottie
 from streamlit_lottie import st_lottie
-from PIL import Image
+import requests
 
 def load_lottieurl(url: str):
         r = requests.get(url)
@@ -12,20 +8,8 @@ def load_lottieurl(url: str):
             return None
         return r.json()
 
-# Home page
-def home():
-    st.header("Home")
-    st.subheader("Upload your .txt file")
-    uploaded_file = st.file_uploader("", type=["txt"])
-    if uploaded_file is not None:
-        # Process the uploaded file here
-        st.subheader("Output")
-        st.text("Your output goes here")
-    
-
-# About page
 def about():
-    st.title("About ")
+    st.header("About")
     st.header("What is :violet[BriefLegal] :question:")
     # st.write(":wavy_dash::wavy_dash::wavy_dash::wavy_dash::wavy_dash::wavy_dash::wavy_dash::wavy_dash:")
     col1,col2 =st.columns([2,6])
@@ -60,61 +44,4 @@ def about():
         width=200,
         key=None,
     )
-# Contact page
-def contact():
-    st.title('Contact Us! ')
-    st.header('We would love to hear from you! :call_me_hand: :smile:')
-    # Facebook link and logo
-    fb = Image.open('./facebook.png')
-    twitter = Image.open('./twitter.png')
-    linkedin = Image.open('./linkedin.png')
-    st.header(' ')
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.image(fb, caption=None, width=40, use_column_width=25)
-        st.write('[Facebook](https://www.facebook.com/)')
-
-    with col2:
-        st.image(twitter, caption=None, width=40, use_column_width=25)
-        st.write('[Twitter](https://twitter.com/)')
-
-    with col3:
-        st.image(linkedin, caption=None, width=40, use_column_width=25)
-        st.write('[LinkedIn](https://www.linkedin.com/)')
-
-
-# App
-def app():
-    col1, col2 = st.columns([2, 3])
-    with col1:
-        lottie_icon = st_lottie(
-        load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_NNGZaASmZJ.json"),
-        speed=1,
-        reverse=False,
-        loop=True,
-        quality="low", # medium ; high
-        height=200,
-        width=200,
-        key=None,
-    )
-    with col2:
-        st.title("BriefLegal")
-        st.subheader("Get to the point... legally")
-        st.write("Simplify complex legal documents with our AI text summarizer.")
-# Horizontal navbar with buttons
-    col1, col2, col3 = st.columns(3)
-    home_button = col1.button("Home")
-    about_button = col2.button("About")
-    contact_button = col3.button("Contact")
-    
-    # Switch between pages based on which button is clicked
-    if home_button:
-        home()
-    elif about_button:
-        about()
-    elif contact_button:
-        contact()
-
-if __name__ == "__main__":
-    app()
-
+       
