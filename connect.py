@@ -19,7 +19,7 @@ from home import home
 
 
 #Step 1: Load the model from the saved pickle file
-with open("C:/Users/krithika/Downloads/bart_model.pkl", "rb") as f:
+with open("C:/Users/Harsha Ashok/Downloads/bart_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 show_home = False
