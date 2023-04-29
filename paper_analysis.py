@@ -32,7 +32,7 @@ with open("C:/Users/krithika/Downloads/bart_model.pkl", "rb") as f:
     model = pickle.load(f)  
 
 
-with open('1195.txt', 'r') as file: 
+with open('1181.txt', 'r') as file: 
       input_text = file.read()
 
 # input_text = extracted_text.decode("utf-8")  # read and decode file contents
@@ -52,7 +52,7 @@ for chunk in chunks:
 #print('bart summary',final_summary)
 
 reference_summary=' '
-with open('ref1195.txt', 'r') as file:
+with open('ref1181.txt', 'r') as file:
     reference_summary = file.read()
 
 # Calculate ROUGE scores
